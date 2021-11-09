@@ -15,9 +15,9 @@ f3=Flight.create(:origin => "MEL", :destination => 'SYD', :date => Date.new, :ai
 puts "#{Flight.count} flights created."
 
 User.destroy_all
-u1=User.create(:name => "Joel", :email => 'joel@ga.co', :password_digest => 'chicken' )
-u2=User.create(:name => "Rowena", :email => 'rowena@ga.co', :password_digest => 'chicken' )
-u3=User.create(:name => "Pat", :email => 'pat@ga.co', :password_digest => 'chicken' )
+u1=User.create(:name => "Joel", :email => 'joel@ga.co', :password_digest => 'chicken', :admin => true )
+u2=User.create(:name => "Rowena", :email => 'rowena@ga.co', :password_digest => 'chicken', :admin => false )
+u3=User.create(:name => "Pat", :email => 'pat@ga.co', :password_digest => 'chicken', :admin => false )
 
 puts "#{User.count} users created."
 

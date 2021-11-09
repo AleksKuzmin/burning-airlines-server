@@ -36,9 +36,7 @@ ActiveRecord::Schema.define(version: 2021_11_09_080444) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "reservations", id: false, force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "flight_id"
+  create_table "reservations", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -47,6 +45,7 @@ ActiveRecord::Schema.define(version: 2021_11_09_080444) do
     t.text "name"
     t.text "email"
     t.text "password_digest"
+    t.boolean "admin"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
