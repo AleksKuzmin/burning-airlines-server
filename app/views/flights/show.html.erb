@@ -1,11 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Flight number:</strong>
-  <%= @flight.flight_number %>
-</p>
-
-<p>
   <strong>Origin:</strong>
   <%= @flight.origin %>
 </p>
@@ -21,8 +16,8 @@
 </p>
 
 <p>
-  <strong>Plane:</strong>
-  <%= @flight.plane_id %>
+  <strong>Airplane:</strong>
+  <%= @flight.airplane_id %>
 </p>
 
 <%= link_to 'Edit', edit_flight_path(@flight) %> |

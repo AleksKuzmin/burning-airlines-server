@@ -64,6 +64,6 @@ class FlightsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def flight_params
-      params.require(:flight).permit(:flight_number, :origin, :destination, :date, :plane_id)
+      params.require(:flight).permit(:origin, :destination, :date, :airplane_id)
     end
 end
