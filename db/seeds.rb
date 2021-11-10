@@ -8,9 +8,9 @@ a3 = Airplane.create( :name => '737', :rows => 20, :columns => 4 )
 puts "#{Airplane.count} airplanes created."
 
 Flight.destroy_all
-f1 = Flight.create( :origin => "JFK", :destination => 'SFO', :date => Date.new, :airplane_id => a1.id )
-f2 = Flight.create( :origin => "JFK", :destination => 'LAX', :date => Date.new, :airplane_id => a2.id )
-f3 = Flight.create( :origin => "MEL", :destination => 'SYD', :date => Date.new, :airplane_id => a3.id )
+f1 = Flight.create( :origin => "JFK", :destination => 'SFO', :date => DateTime.now, :airplane_id => a1.id )
+f2 = Flight.create( :origin => "JFK", :destination => 'LAX', :date => DateTime.now, :airplane_id => a2.id )
+f3 = Flight.create( :origin => "MEL", :destination => 'SYD', :date => DateTime.now, :airplane_id => a3.id )
 
 puts "#{Flight.count} flights created."
 
