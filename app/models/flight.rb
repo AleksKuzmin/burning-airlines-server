@@ -4,6 +4,9 @@ class Flight < ApplicationRecord
   has_and_belongs_to_many :users
 
   # TODO: get all seats
+  def seats
+    airplane.seats
+  end
 
   def reserved_seats
     reservations.map do |r|
